@@ -1,0 +1,12 @@
+# The Vite + React app lives in the todo-list/ subfolder.
+[build]
+  base = "todo-list"
+  # Install dependencies (including devDependencies such as Vite) before
+  # building, so the build works even when no install step has run first.
+  command = "npm ci --include=dev && npm run build"
+  # Relative to the base directory (todo-list/dist).
+  publish = "dist"
+
+[build.environment]
+  # Vite 8 requires Node ^20.19.0 or >=22.12.0.
+  NODE_VERSION = "22"
